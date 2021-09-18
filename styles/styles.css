@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+h1 {
+  text-align: center;
+  padding: 1.4em;
+  letter-spacing: 0.4em;
+  font-size: 1.3rem;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  color: #5e7a7d;
+}
+
+label {
+  font-size: 1rem;
+  padding: 0.5em 0;
+  color: #7f9c9f;
+}
+
+input {
+  background-color: #f4fafa;
+  border-style: none;
+  padding: .5em;
+  color: #00494d;
+  font-size: 1.3rem;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #c5e4e7;
+}
+
+main {
+  background-color: white;
+  padding: 1.3em;
+  border-radius: 20px;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #26c0ab;
+  color: #00494d;
+  width: 100%;
+  padding: 1em;
+}
+
+.result__container {
+  background-color: #00494d;
+  padding: 1.3em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=styles.css.map */

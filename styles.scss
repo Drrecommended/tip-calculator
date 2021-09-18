@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+$primary: hsl(172, 67%, 45%);
+$dark-cyan__ligt: hsl(184, 14%, 56%);
+$dark-cyan__dark: hsl(186, 14%, 43%);
+$light-cyan__light: hsl(189, 41%, 97%);
+$light-cyan__dark: hsl(185, 41%, 84%);
+$very__dark-cyan: hsl(183, 100%, 15%);
+$white: hsl(0, 0%, 100%);
+$pad1: 1.3em;
+$pad2: .5em 0;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+h1 {
+  text-align: center;
+  padding: 1.4em;
+  letter-spacing: 0.4em;
+  font-size: 1.3rem;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  color: $dark-cyan__dark;
+}
+
+label {
+    font-size: 1rem;
+    padding: $pad2;
+    color: $dark-cyan__ligt;
+}
+
+input {
+    background-color: $light-cyan__light;
+    border-style: none;
+    padding: .5em;
+    color: $very__dark-cyan;
+    font-size: 1.3rem;
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: $light-cyan__dark;
+}
+
+main {
+  background-color: $white;
+  padding: 1.3em;
+  border-radius: 20px;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+button {
+    background-color: $primary;
+    color: $very__dark-cyan;
+    width: 100%;
+    padding: 1em;
+}
+
+.result__container {
+  background-color: $very__dark-cyan;
+  padding: $pad1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
