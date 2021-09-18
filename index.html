@@ -22,8 +22,12 @@
     <!--Calculator-->
     <main>
       <div class="container">
-        <label>Bill</label>
-        <input type="text" />
+        <div class="addon">
+          <label>Bill</label>
+          <input type="text" dir="rtl"/>
+          <img src="./images/icon-dollar.svg" alt="">
+        </div>
+
         <label>Select Tip %</label>
         <div>
           <ul>
@@ -35,18 +39,21 @@
             <li>Custom</li>
           </ul>
         </div>
-        <label>Number of People</label>
-        <input type="text" />
+        <div class="addon">
+          <label>Number of People</label>
+          <input type="text" dir="rtl"/>
+          <img src="./images/icon-person.svg" alt="">
+        </div>
       </div>
       <!--results-->
       <div class="result__container">
         <div class="inner-result__container">
-          <h2>Tip Amount</h2>
-          <h3>/ person</h3>
+          <p>Tip Amount</p>
+          <p>/ person</p>
         </div>
-        <div class="result__container">
-          <h2>Total</h2>
-          <h3>/ person Reset</h3>
+        <div class="inner-result__container">
+          <p>Total</p>
+          <p>/ person Reset</p>
         </div>
         <button>reset</button>
       </div>

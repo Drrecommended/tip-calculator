@@ -14,18 +14,33 @@ h1 {
   line-height: 1.5em;
   text-transform: uppercase;
   color: #5e7a7d;
+  font-weight: 700;
+}
+
+.addon {
+  position: relative;
+}
+
+img {
+  position: absolute;
+  left: 1rem;
+  pointer-events: none;
+  top: 2rem;
 }
 
 label {
   font-size: 1rem;
   padding: 0.5em 0;
   color: #7f9c9f;
+  position: relative;
 }
 
 input {
   background-color: #f4fafa;
   border-style: none;
-  padding: .5em;
+  border-radius: 5px;
+  padding: 0.3em;
+  padding-right: .7em;
   color: #00494d;
   font-size: 1.3rem;
   width: 100%;
@@ -33,7 +48,11 @@ input {
   margin-bottom: 1em;
 }
 
-li {
+ul {
+  display: flex;
+}
+
+ul li {
   list-style: none;
 }
 
@@ -44,7 +63,7 @@ body {
 main {
   background-color: white;
   padding: 1.3em;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .container {
@@ -55,13 +74,19 @@ main {
 button {
   background-color: #26c0ab;
   color: #00494d;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
   width: 100%;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .result__container {
   background-color: #00494d;
   padding: 1.3em;
+  border-radius: 15px;
 }
 
 .attribution {

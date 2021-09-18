@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 $primary: hsl(172, 67%, 45%);
 $dark-cyan__ligt: hsl(184, 14%, 56%);
@@ -8,7 +8,9 @@ $light-cyan__dark: hsl(185, 41%, 84%);
 $very__dark-cyan: hsl(183, 100%, 15%);
 $white: hsl(0, 0%, 100%);
 $pad1: 1.3em;
-$pad2: .5em 0;
+$pad2: 0.5em 0;
+$border-radius1: 15px;
+$border-radius2: 5px;
 
 * {
   margin: 0;
@@ -25,27 +27,45 @@ h1 {
   line-height: 1.5em;
   text-transform: uppercase;
   color: $dark-cyan__dark;
+  font-weight: 700;
+}
+
+.addon {
+  position: relative;
+}
+
+img {
+  position: absolute;
+  left: 1rem;
+  pointer-events: none;
+  top: 2rem;
 }
 
 label {
-    font-size: 1rem;
-    padding: $pad2;
-    color: $dark-cyan__ligt;
+  font-size: 1rem;
+  padding: $pad2;
+  color: $dark-cyan__ligt;
+  position: relative;
 }
 
 input {
-    background-color: $light-cyan__light;
-    border-style: none;
-    padding: .5em;
-    color: $very__dark-cyan;
-    font-size: 1.3rem;
-    width: 100%;
-    font-weight: 700;
-    margin-bottom: 1em;
+  background-color: $light-cyan__light;
+  border-style: none;
+  border-radius: $border-radius2;
+  padding: 0.3em;
+  padding-right: .7em;
+  color: $very__dark-cyan;
+  font-size: 1.3rem;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 1em;
 }
 
-li {
-  list-style: none;
+ul {
+  display: flex;
+  li {
+    list-style: none;
+  }
 }
 
 body {
@@ -55,24 +75,30 @@ body {
 main {
   background-color: $white;
   padding: 1.3em;
-  border-radius: 20px;
+  border-radius: $border-radius1;
 }
 
 .container {
-    width: 95%;
-    margin: 0 auto;
+  width: 95%;
+  margin: 0 auto;
 }
 
 button {
-    background-color: $primary;
-    color: $very__dark-cyan;
-    width: 100%;
-    padding: 1em;
+  background-color: $primary;
+  color: $very__dark-cyan;
+  border-radius: $border-radius2;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  padding: 0.5em;
 }
 
 .result__container {
   background-color: $very__dark-cyan;
   padding: $pad1;
+  border-radius: $border-radius1;
 }
 
 .attribution {
