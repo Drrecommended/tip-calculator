@@ -24,36 +24,48 @@
       <div class="container">
         <div class="addon">
           <label>Bill</label>
-          <input type="text" dir="rtl"/>
-          <img src="./images/icon-dollar.svg" alt="">
+          <!--on key press check for num function passing event-->
+          <input
+            type="text"
+            placeholder="0"
+            dir="rtl"
+            onkeypress="checkForNum(event)"
+          />
+          <img src="./images/icon-dollar.svg" alt="" />
         </div>
-
+        <!--select amount to tip section-->
         <label>Select Tip %</label>
-        <div>
-          <ul>
-            <li>5%</li>
-            <li>10%</li>
-            <li>15%</li>
-            <li>25%</li>
-            <li>50%</li>
-            <li>Custom</li>
-          </ul>
-        </div>
+
+        <ul>
+          <li><button>5%</button></li>
+          <li><button>10%</button></li>
+          <li><button>15%</button></li>
+          <li><button>25%</button></li>
+          <li><button>50%</button></li>
+          <li><input type="text" placeholder="Custom" dir="rtl" /></li>
+        </ul>
+        <!--number of people section-->
         <div class="addon">
           <label>Number of People</label>
-          <input type="text" dir="rtl"/>
-          <img src="./images/icon-person.svg" alt="">
+          <input type="text" placeholder="0" dir="rtl" />
+          <img src="./images/icon-person.svg" alt="" />
         </div>
       </div>
       <!--results-->
       <div class="result__container">
         <div class="inner-result__container">
-          <p>Tip Amount</p>
-          <p>/ person</p>
+          <div>
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <p id="tip-amount">$0.00</p>
         </div>
         <div class="inner-result__container">
-          <p>Total</p>
-          <p>/ person Reset</p>
+          <div>
+            <p>Total</p>
+            <p>/ person Reset</p>
+          </div>
+          <p id="total-amount">$0.00</p>
         </div>
         <button>reset</button>
       </div>
@@ -65,5 +77,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

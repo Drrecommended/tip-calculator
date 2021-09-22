@@ -32,41 +32,68 @@ h1 {
 
 .addon {
   position: relative;
-}
-
-img {
-  position: absolute;
-  left: 1rem;
-  pointer-events: none;
-  top: 2rem;
+  input {
+    background-color: $light-cyan__light;
+    border-style: none;
+    border-radius: $border-radius2;
+    padding: 0.3em;
+    padding-right: 0.7em;
+    color: $very__dark-cyan;
+    font-size: 1.3rem;
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: 1em;
+    &::placeholder {
+        color: $light-cyan__dark
+    }
+  }
+  img {
+    position: absolute;
+    left: 1rem;
+    pointer-events: none;
+    top: 2.7rem;
+  }
 }
 
 label {
   font-size: 1rem;
-  padding: $pad2;
   color: $dark-cyan__ligt;
   position: relative;
-}
-
-input {
-  background-color: $light-cyan__light;
-  border-style: none;
-  border-radius: $border-radius2;
-  padding: 0.3em;
-  padding-right: .7em;
-  color: $very__dark-cyan;
-  font-size: 1.3rem;
-  width: 100%;
-  font-weight: 700;
-  margin-bottom: 1em;
+  display: inline-block;
+  padding-bottom: .8em;
 }
 
 ul {
   display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2em;
+  gap: 10px 10px;
   li {
     list-style: none;
+    button {
+        background-color: $very__dark-cyan;
+        color: $white;
+        width: 100%;
+        min-width: 140px;
+    }
+    input {
+        width: 140px;
+        font-size: 1.2rem;
+        border-radius: $border-radius2;
+    }
   }
 }
+
+input {
+    background-color: $light-cyan__light;
+    border: none;
+    padding: 0.5em;
+    &input:focus {
+        outline: solid 1px;
+        border-color: #719ECE;
+    }
+}
+
 
 body {
   background-color: $light-cyan__dark;
@@ -76,6 +103,7 @@ main {
   background-color: $white;
   padding: 1.3em;
   border-radius: $border-radius1;
+  min-height: 0%;
 }
 
 .container {
@@ -93,18 +121,19 @@ button {
   border: none;
   width: 100%;
   padding: 0.5em;
+  &:hover {
+    background-color: $light-cyan__dark;
+    cursor: pointer;
+}
 }
 
 .result__container {
   background-color: $very__dark-cyan;
   padding: $pad1;
   border-radius: $border-radius1;
+    .inner-result__container {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}

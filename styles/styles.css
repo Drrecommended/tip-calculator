@@ -21,26 +21,12 @@ h1 {
   position: relative;
 }
 
-img {
-  position: absolute;
-  left: 1rem;
-  pointer-events: none;
-  top: 2rem;
-}
-
-label {
-  font-size: 1rem;
-  padding: 0.5em 0;
-  color: #7f9c9f;
-  position: relative;
-}
-
-input {
+.addon input {
   background-color: #f4fafa;
   border-style: none;
   border-radius: 5px;
   padding: 0.3em;
-  padding-right: .7em;
+  padding-right: 0.7em;
   color: #00494d;
   font-size: 1.3rem;
   width: 100%;
@@ -48,12 +34,58 @@ input {
   margin-bottom: 1em;
 }
 
+.addon input::placeholder {
+  color: #c5e4e7;
+}
+
+.addon img {
+  position: absolute;
+  left: 1rem;
+  pointer-events: none;
+  top: 2.7rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #7f9c9f;
+  position: relative;
+  display: inline-block;
+  padding-bottom: .8em;
+}
+
 ul {
   display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2em;
+  gap: 10px 10px;
 }
 
 ul li {
   list-style: none;
+}
+
+ul li button {
+  background-color: #00494d;
+  color: white;
+  width: 100%;
+  min-width: 140px;
+}
+
+ul li input {
+  width: 140px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+input {
+  background-color: #f4fafa;
+  border: none;
+  padding: 0.5em;
+}
+
+inputinput:focus {
+  outline: solid 1px;
+  border-color: #719ECE;
 }
 
 body {
@@ -64,6 +96,7 @@ main {
   background-color: white;
   padding: 1.3em;
   border-radius: 15px;
+  min-height: 0%;
 }
 
 .container {
@@ -83,18 +116,19 @@ button {
   padding: 0.5em;
 }
 
+button:hover {
+  background-color: #c5e4e7;
+  cursor: pointer;
+}
+
 .result__container {
   background-color: #00494d;
   padding: 1.3em;
   border-radius: 15px;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #3e52a3;
+.result__container .inner-result__container {
+  display: flex;
+  justify-content: space-between;
 }
 /*# sourceMappingURL=styles.css.map */
