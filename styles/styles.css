@@ -23,19 +23,6 @@ h1 {
 
 .addon input {
   background-color: #f4fafa;
-  border-style: none;
-  border-radius: 5px;
-  padding: 0.3em;
-  padding-right: 0.7em;
-  color: #00494d;
-  font-size: 1.3rem;
-  width: 100%;
-  font-weight: 700;
-  margin-bottom: 1em;
-}
-
-.addon input::placeholder {
-  color: #c5e4e7;
 }
 
 .addon img {
@@ -50,14 +37,14 @@ label {
   color: #7f9c9f;
   position: relative;
   display: inline-block;
-  padding-bottom: .8em;
+  padding-bottom: 0.8em;
 }
 
 ul {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 2em;
-  gap: 10px 10px;
+  gap: 15px 15px;
 }
 
 ul li {
@@ -67,25 +54,39 @@ ul li {
 ul li button {
   background-color: #00494d;
   color: white;
-  width: 100%;
-  min-width: 140px;
+  width: 140px;
+  max-width: 140px;
 }
 
 ul li input {
   width: 140px;
-  font-size: 1.2rem;
-  border-radius: 5px;
+}
+
+ul li input::placeholder {
+  color: #c5e4e7;
 }
 
 input {
   background-color: #f4fafa;
   border: none;
-  padding: 0.5em;
+  font-size: 24px;
+  border-radius: 5px;
+  border-style: none;
+  padding: 0.3em;
+  padding-right: 0.7em;
+  color: #00494d;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 1.3em;
 }
 
 inputinput:focus {
   outline: solid 1px;
-  border-color: #719ECE;
+  border-color: #719ece;
+}
+
+input::placeholder {
+  color: #c5e4e7;
 }
 
 body {
@@ -105,7 +106,7 @@ main {
 }
 
 button {
-  background-color: #26c0ab;
+  background-color: #5e7a7d;
   color: #00494d;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -128,7 +129,13 @@ button:hover {
 }
 
 .result__container .inner-result__container {
+  padding: 0.5em 0;
   display: flex;
   justify-content: space-between;
+}
+
+.number {
+  color: #26c0ab;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */

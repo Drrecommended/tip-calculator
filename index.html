@@ -29,7 +29,11 @@
             type="text"
             placeholder="0"
             dir="rtl"
+            id="bill-amount"
             onkeypress="checkForNum(event)"
+            onchange="(function(el){el.value=parseFloat(el.value).toFixed(2);})(this)"
+            max="1.00"
+            step="0.05"
           />
           <img src="./images/icon-dollar.svg" alt="" />
         </div>
@@ -37,17 +41,33 @@
         <label>Select Tip %</label>
 
         <ul>
-          <li><button>5%</button></li>
-          <li><button>10%</button></li>
-          <li><button>15%</button></li>
-          <li><button>25%</button></li>
-          <li><button>50%</button></li>
-          <li><input type="text" placeholder="Custom" dir="rtl" /></li>
+          <li><button id="five">5%</button></li>
+          <li><button id="ten">10%</button></li>
+          <li><button id="fifteen">15%</button></li>
+          <li><button id="twenty-five">25%</button></li>
+          <li><button id="fifty">50%</button></li>
+          <li>
+            <input
+              type="text"
+              placeholder="Custom"
+              id="custom"
+              onkeypress="checkForNum(event)"
+              dir="rtl"
+              onchange="(function(el){el.value=parseFloat(el.value).toFixed(2);})(this)"
+              max="1.00"
+              step="0.05"
+            />
+          </li>
         </ul>
         <!--number of people section-->
         <div class="addon">
           <label>Number of People</label>
-          <input type="text" placeholder="0" dir="rtl" />
+          <input
+            type="text"
+            placeholder="0"
+            onkeypress="checkForNum(event)"
+            dir="rtl"
+          />
           <img src="./images/icon-person.svg" alt="" />
         </div>
       </div>
@@ -58,14 +78,14 @@
             <p>Tip Amount</p>
             <p>/ person</p>
           </div>
-          <p id="tip-amount">$0.00</p>
+          <p class="number" id="tip-amount">$0.00</p>
         </div>
         <div class="inner-result__container">
           <div>
             <p>Total</p>
             <p>/ person Reset</p>
           </div>
-          <p id="total-amount">$0.00</p>
+          <p class="number" id="total-amount">$0.00</p>
         </div>
         <button>reset</button>
       </div>
