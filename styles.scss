@@ -7,7 +7,7 @@ $light-cyan__light: hsl(189, 41%, 97%);
 $light-cyan__dark: hsl(185, 41%, 84%);
 $very__dark-cyan: hsl(183, 100%, 15%);
 $white: hsl(0, 0%, 100%);
-$pad1: 1.3em;
+$pad1: 1.5em;
 $pad2: 0.5em 0;
 $border-radius1: 15px;
 $border-radius2: 5px;
@@ -31,16 +31,18 @@ h1 {
   font-weight: 700;
 }
 
+main {
+  background-color: $white;
+  padding: 1.7em;
+  border-radius: $border-radius1;
+  min-height: 0%;
+}
+
 .addon {
   position: relative;
+  padding: .6em;
   input {
     background-color: $light-cyan__light;
-  }
-  img {
-    position: absolute;
-    left: 1rem;
-    pointer-events: none;
-    top: 2.7rem;
   }
 }
 
@@ -64,12 +66,12 @@ ul {
       color: $white;
       width: 140px;
       max-width: 140px;
+      &:focus {
+        background-color: $primary;
+      }
     }
     input {
       width: 140px;
-      &::placeholder {
-        color: $light-cyan__dark;
-      }
     }
   }
 }
@@ -85,8 +87,8 @@ input {
   color: $very__dark-cyan;
   width: 100%;
   font-weight: 700;
-  margin-bottom: 1.3em;
-  &input:focus {
+  margin-bottom: 1em;
+  &:focus {
     outline: solid 1px;
     border-color: #719ece;
   }
@@ -99,17 +101,7 @@ body {
   background-color: $light-cyan__dark;
 }
 
-main {
-  background-color: $white;
-  padding: 1.3em;
-  border-radius: $border-radius1;
-  min-height: 0%;
-}
 
-.container {
-  width: 95%;
-  margin: 0 auto;
-}
 
 button {
   background-color: $dark-cyan__dark;
@@ -135,7 +127,27 @@ button {
     padding: $pad2;
     display: flex;
     justify-content: space-between;
+    div {
+      display: block;
+    }
+    &:first-child {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    &:nth-child(2) {
+      padding-bottom: 2em;
+    }
   }
+}
+
+.amount {
+  color: $white;
+  margin-bottom: 5px;
+}
+
+.person {
+  color: $dark-cyan__ligt;
+  align-items: center;
 }
 
 .number {

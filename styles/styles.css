@@ -17,19 +17,20 @@ h1 {
   font-weight: 700;
 }
 
+main {
+  background-color: white;
+  padding: 1.7em;
+  border-radius: 15px;
+  min-height: 0%;
+}
+
 .addon {
   position: relative;
+  padding: .6em;
 }
 
 .addon input {
   background-color: #f4fafa;
-}
-
-.addon img {
-  position: absolute;
-  left: 1rem;
-  pointer-events: none;
-  top: 2.7rem;
 }
 
 label {
@@ -58,12 +59,12 @@ ul li button {
   max-width: 140px;
 }
 
-ul li input {
-  width: 140px;
+ul li button:focus {
+  background-color: #26c0ab;
 }
 
-ul li input::placeholder {
-  color: #c5e4e7;
+ul li input {
+  width: 140px;
 }
 
 input {
@@ -77,10 +78,10 @@ input {
   color: #00494d;
   width: 100%;
   font-weight: 700;
-  margin-bottom: 1.3em;
+  margin-bottom: 1em;
 }
 
-inputinput:focus {
+input:focus {
   outline: solid 1px;
   border-color: #719ece;
 }
@@ -91,18 +92,6 @@ input::placeholder {
 
 body {
   background-color: #c5e4e7;
-}
-
-main {
-  background-color: white;
-  padding: 1.3em;
-  border-radius: 15px;
-  min-height: 0%;
-}
-
-.container {
-  width: 95%;
-  margin: 0 auto;
 }
 
 button {
@@ -124,7 +113,7 @@ button:hover {
 
 .result__container {
   background-color: #00494d;
-  padding: 1.3em;
+  padding: 1.5em;
   border-radius: 15px;
 }
 
@@ -132,6 +121,29 @@ button:hover {
   padding: 0.5em 0;
   display: flex;
   justify-content: space-between;
+}
+
+.result__container .inner-result__container div {
+  display: block;
+}
+
+.result__container .inner-result__container:first-child {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.result__container .inner-result__container:nth-child(2) {
+  padding-bottom: 2em;
+}
+
+.amount {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.person {
+  color: #7f9c9f;
+  align-items: center;
 }
 
 .number {

@@ -36,31 +36,29 @@
             step="0.05"
           />
           <img src="./images/icon-dollar.svg" alt="" />
-        </div>
-        <!--select amount to tip section-->
-        <label>Select Tip %</label>
+          <!--select amount to tip section-->
+          <label>Select Tip %</label>
 
-        <ul>
-          <li><button id="five">5%</button></li>
-          <li><button id="ten">10%</button></li>
-          <li><button id="fifteen">15%</button></li>
-          <li><button id="twenty-five">25%</button></li>
-          <li><button id="fifty">50%</button></li>
-          <li>
-            <input
-              type="text"
-              placeholder="Custom"
-              id="custom"
-              onkeypress="checkForNum(event)"
-              dir="rtl"
-              onchange="(function(el){el.value=parseFloat(el.value).toFixed(2);})(this)"
-              max="1.00"
-              step="0.05"
-            />
-          </li>
-        </ul>
-        <!--number of people section-->
-        <div class="addon">
+          <ul>
+            <li><button id="five">5%</button></li>
+            <li><button id="ten">10%</button></li>
+            <li><button id="fifteen">15%</button></li>
+            <li><button id="twenty-five">25%</button></li>
+            <li><button id="fifty">50%</button></li>
+            <li>
+              <input
+                type="text"
+                placeholder="Custom"
+                id="custom"
+                onkeypress="checkForNum(event)"
+                dir="rtl"
+                onchange="(function(el){el.value=parseFloat(el.value).toFixed(2);})(this)"
+                max="1.00"
+                step="0.05"
+              />
+            </li>
+          </ul>
+          <!--number of people section-->
           <label>Number of People</label>
           <input
             type="text"
@@ -75,15 +73,15 @@
       <div class="result__container">
         <div class="inner-result__container">
           <div>
-            <p>Tip Amount</p>
-            <p>/ person</p>
+            <p class="amount">Tip Amount</p>
+            <p class="person">/ person</p>
           </div>
           <p class="number" id="tip-amount">$0.00</p>
         </div>
         <div class="inner-result__container">
           <div>
-            <p>Total</p>
-            <p>/ person Reset</p>
+            <p class="amount">Total</p>
+            <p class="person">/ person</p>
           </div>
           <p class="number" id="total-amount">$0.00</p>
         </div>
