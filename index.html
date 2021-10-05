@@ -25,12 +25,15 @@
         <div class="icon-container">
           <label>Bill</label>
           <!--on key press check for num function passing event-->
+          <!--FIX ON KEY DOWN BY ADDING A RESUABLE FUNCTION THAT DOES NOT ACCEPT SYMBOLS-->
           <input
             type="number"
             placeholder="0"
             dir="rtl"
             id="bill-amount"
-            onchange="(function(el){el.value=parseFloat(el.value).toFixed(2);})(this)"
+            onchange="return validateForm()"
+            onkeydown="return event.keyCode === 8 ||
+              event.keyCode === 46 ? true : !isNaN(Number(event.key))"
             max="1.00"
             step="0.05"
           />
@@ -59,7 +62,9 @@
         </ul>
         <!--number of people section-->
         <div class="icon-container">
-          <label>Number of People</label>
+          <div>
+            <label>Number of People</label>
+          </div>
           <input type="number" placeholder="0" id="people-count" dir="rtl" />
           <img src="./images/icon-person.svg" alt="" />
         </div>
@@ -90,7 +95,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
-    <script src="index.js"></script>
     <script src="vendor.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
