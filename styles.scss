@@ -38,11 +38,17 @@ main {
   min-height: 0%;
 }
 
-.addon {
+.icon-container {
   position: relative;
   padding: .6em;
   input {
     background-color: $light-cyan__light;
+  }
+  img {
+    position: absolute;
+    left: 1rem;
+    pointer-events: none;
+    top: 3rem;
   }
 }
 

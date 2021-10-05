@@ -22,50 +22,45 @@
     <!--Calculator-->
     <main>
       <div class="container">
-        <div class="addon">
+        <div class="icon-container">
           <label>Bill</label>
           <!--on key press check for num function passing event-->
           <input
-            type="text"
+            type="number"
             placeholder="0"
             dir="rtl"
             id="bill-amount"
-            onkeypress="checkForNum(event)"
             onchange="(function(el){el.value=parseFloat(el.value).toFixed(2);})(this)"
             max="1.00"
             step="0.05"
           />
           <img src="./images/icon-dollar.svg" alt="" />
-          <!--select amount to tip section-->
-          <label>Select Tip %</label>
+        </div>
+        <!--select amount to tip section-->
+        <label>Select Tip %</label>
 
-          <ul>
-            <li><button id="five">5%</button></li>
-            <li><button id="ten">10%</button></li>
-            <li><button id="fifteen">15%</button></li>
-            <li><button id="twenty-five">25%</button></li>
-            <li><button id="fifty">50%</button></li>
-            <li>
-              <input
-                type="text"
-                placeholder="Custom"
-                id="custom"
-                onkeypress="checkForNum(event)"
-                dir="rtl"
-                onchange="(function(el){el.value=parseFloat(el.value).toFixed(2);})(this)"
-                max="1.00"
-                step="0.05"
-              />
-            </li>
-          </ul>
-          <!--number of people section-->
+        <ul>
+          <li><button id="five">5%</button></li>
+          <li><button id="ten">10%</button></li>
+          <li><button id="fifteen">15%</button></li>
+          <li><button id="twenty-five">25%</button></li>
+          <li><button id="fifty">50%</button></li>
+          <li>
+            <input
+              type="number"
+              placeholder="Custom"
+              id="custom"
+              dir="rtl"
+              onchange="(function(el){el.value=parseFloat(el.value).toFixed(2);})(this)"
+              max="1.00"
+              step="0.05"
+            />
+          </li>
+        </ul>
+        <!--number of people section-->
+        <div class="icon-container">
           <label>Number of People</label>
-          <input
-            type="text"
-            placeholder="0"
-            onkeypress="checkForNum(event)"
-            dir="rtl"
-          />
+          <input type="number" placeholder="0" id="people-count" dir="rtl" />
           <img src="./images/icon-person.svg" alt="" />
         </div>
       </div>
@@ -96,5 +91,6 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
     <script src="index.js"></script>
+    <script src="vendor.js"></script>
   </body>
 </html>

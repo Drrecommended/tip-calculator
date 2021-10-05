@@ -24,13 +24,20 @@ main {
   min-height: 0%;
 }
 
-.addon {
+.icon-container {
   position: relative;
   padding: .6em;
 }
 
-.addon input {
+.icon-container input {
   background-color: #f4fafa;
+}
+
+.icon-container img {
+  position: absolute;
+  left: 1rem;
+  pointer-events: none;
+  top: 3rem;
 }
 
 label {
