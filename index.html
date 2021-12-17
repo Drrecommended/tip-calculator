@@ -30,12 +30,11 @@
             type="number"
             placeholder="0"
             dir="rtl"
+            onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+            onkeyup="formatBill(event)"
             id="bill-amount"
-            onchange="return validateForm()"
-            onkeydown="return event.keyCode === 8 ||
-              event.keyCode === 46 ? true : !isNaN(Number(event.key))"
             max="1.00"
-            step="0.05"
+            step="0.1"
           />
           <img src="./images/icon-dollar.svg" alt="" />
         </div>
@@ -43,29 +42,36 @@
         <label>Select Tip %</label>
 
         <ul>
-          <li><button id="five">5%</button></li>
-          <li><button id="ten">10%</button></li>
-          <li><button id="fifteen">15%</button></li>
-          <li><button id="twenty-five">25%</button></li>
-          <li><button id="fifty">50%</button></li>
+          <li><button id="percent" data-percent="5">5%</button></li>
+          <li><button id="percent" data-percent="10">10%</button></li>
+          <li><button id="percent" data-percent="15">15%</button></li>
+          <li><button id="percent" data-percent="25">25%</button></li>
+          <li><button id="percent" data-percent="50">50%</button></li>
           <li>
             <input
               type="number"
+              data-percent
               placeholder="Custom"
-              id="custom"
+              id="percent"
               dir="rtl"
-              onchange="(function(el){el.value=parseFloat(el.value).toFixed(2);})(this)"
               max="1.00"
-              step="0.05"
+              step="1.00"
             />
           </li>
         </ul>
         <!--number of people section-->
         <div class="icon-container">
-          <div>
+          <div class="flex">
             <label>Number of People</label>
+            <label class="warning">Can't be zero</label>
           </div>
-          <input type="number" placeholder="0" id="people-count" dir="rtl" />
+          <input
+            type="number"
+            placeholder="0"
+            id="head-count"
+            dir="rtl"
+            onkeydown="getHeadCount()"
+          />
           <img src="./images/icon-person.svg" alt="" />
         </div>
       </div>
@@ -76,16 +82,16 @@
             <p class="amount">Tip Amount</p>
             <p class="person">/ person</p>
           </div>
-          <p class="number" id="tip-amount">$0.00</p>
+          <p class="number" id="tip-amount" data-tip>$0.00</p>
         </div>
         <div class="inner-result__container">
           <div>
             <p class="amount">Total</p>
             <p class="person">/ person</p>
           </div>
-          <p class="number" id="total-amount">$0.00</p>
+          <p class="number" id="total-amount" data-total>$0.00</p>
         </div>
-        <button>reset</button>
+        <button data-reset>reset</button>
       </div>
     </main>
 

@@ -157,4 +157,13 @@ button:hover {
   color: #26c0ab;
   font-size: 2rem;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex .warning {
+  visibility: hidden;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -160,3 +160,11 @@ button {
   color: $primary;
   font-size: 2rem;
 }
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  .warning {
+    visibility: hidden;
+  }
+}
