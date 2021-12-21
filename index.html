@@ -15,6 +15,8 @@
     <title>Frontend Mentor | Tip calculator app</title>
 
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="vendor.js" defer></script>
+    <!-- <script src="index.js" defer></script> -->
   </head>
   <body>
     <!--Header-->
@@ -24,15 +26,11 @@
       <div class="container">
         <div class="icon-container">
           <label>Bill</label>
-          <!--on key press check for num function passing event-->
-          <!--FIX ON KEY DOWN BY ADDING A RESUABLE FUNCTION THAT DOES NOT ACCEPT SYMBOLS-->
           <input
             type="number"
             placeholder="0"
             dir="rtl"
-            onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
-            onkeyup="formatBill(event)"
-            id="bill-amount"
+            id="bill"
             max="1.00"
             step="0.1"
           />
@@ -40,25 +38,23 @@
         </div>
         <!--select amount to tip section-->
         <label>Select Tip %</label>
+        <div>
+          <button id="percent-buttons">5%</button>
+          <button id="percent-buttons">10%</button>
+          <button id="percent-buttons">15%</button>
+          <button id="percent-buttons">25%</button>
+          <button id="percent-buttons">50%</button>
+          <input
+            type="number"
+            data-percent
+            placeholder="Custom"
+            id="custom-percent"
+            dir="rtl"
+            max="1.00"
+            step="1.00"
+          />
+        </div>
 
-        <ul>
-          <li><button id="percent" data-percent="5">5%</button></li>
-          <li><button id="percent" data-percent="10">10%</button></li>
-          <li><button id="percent" data-percent="15">15%</button></li>
-          <li><button id="percent" data-percent="25">25%</button></li>
-          <li><button id="percent" data-percent="50">50%</button></li>
-          <li>
-            <input
-              type="number"
-              data-percent
-              placeholder="Custom"
-              id="percent"
-              dir="rtl"
-              max="1.00"
-              step="1.00"
-            />
-          </li>
-        </ul>
         <!--number of people section-->
         <div class="icon-container">
           <div class="flex">
@@ -68,9 +64,8 @@
           <input
             type="number"
             placeholder="0"
-            id="head-count"
+            id="person-count"
             dir="rtl"
-            onkeydown="getHeadCount()"
           />
           <img src="./images/icon-person.svg" alt="" />
         </div>
@@ -82,16 +77,16 @@
             <p class="amount">Tip Amount</p>
             <p class="person">/ person</p>
           </div>
-          <p class="number" id="tip-amount" data-tip>$0.00</p>
+          <p class="number" id="tip-per-person" data-tip>$0.00</p>
         </div>
         <div class="inner-result__container">
           <div>
             <p class="amount">Total</p>
             <p class="person">/ person</p>
           </div>
-          <p class="number" id="total-amount" data-total>$0.00</p>
+          <p class="number" id="total-per-person" data-total>$0.00</p>
         </div>
-        <button data-reset>reset</button>
+        <button id="reset-button">reset</button>
       </div>
     </main>
 
@@ -101,7 +96,5 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
-    <script src="vendor.js"></script>
-    <script src="index.js"></script>
   </body>
 </html>
