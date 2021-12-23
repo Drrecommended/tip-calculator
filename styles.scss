@@ -40,7 +40,7 @@ main {
 
 .icon-container {
   position: relative;
-  padding: .6em;
+  padding: 0.6em;
   input {
     background-color: $light-cyan__light;
   }
@@ -58,28 +58,6 @@ label {
   position: relative;
   display: inline-block;
   padding-bottom: 0.8em;
-}
-
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 2em;
-  gap: 15px 15px;
-  li {
-    list-style: none;
-    button {
-      background-color: $very__dark-cyan;
-      color: $white;
-      width: 140px;
-      max-width: 140px;
-      &:focus {
-        background-color: $primary;
-      }
-    }
-    input {
-      width: 140px;
-    }
-  }
 }
 
 input {
@@ -107,11 +85,9 @@ body {
   background-color: $light-cyan__dark;
 }
 
-
-
 button {
-  background-color: $dark-cyan__dark;
-  color: $very__dark-cyan;
+  background-color: $very__dark-cyan;
+  color: white;
   border-radius: $border-radius2;
   font-size: 1.2rem;
   font-weight: 700;
@@ -121,6 +97,7 @@ button {
   padding: 0.5em;
   &:hover {
     background-color: $light-cyan__dark;
+    color: $very__dark-cyan;
     cursor: pointer;
   }
 }
@@ -161,10 +138,19 @@ button {
   font-size: 2rem;
 }
 
-.flex{
+.flex {
   display: flex;
   justify-content: space-between;
   .warning {
     visibility: hidden;
   }
+}
+
+#reset-button {
+  background-color: $primary;
+}
+
+.active {
+  background-color: $primary;
+  color: $very__dark-cyan;
 }

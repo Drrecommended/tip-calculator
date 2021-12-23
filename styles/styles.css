@@ -26,7 +26,7 @@ main {
 
 .icon-container {
   position: relative;
-  padding: .6em;
+  padding: 0.6em;
 }
 
 .icon-container input {
@@ -46,32 +46,6 @@ label {
   position: relative;
   display: inline-block;
   padding-bottom: 0.8em;
-}
-
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 2em;
-  gap: 15px 15px;
-}
-
-ul li {
-  list-style: none;
-}
-
-ul li button {
-  background-color: #00494d;
-  color: white;
-  width: 140px;
-  max-width: 140px;
-}
-
-ul li button:focus {
-  background-color: #26c0ab;
-}
-
-ul li input {
-  width: 140px;
 }
 
 input {
@@ -102,8 +76,8 @@ body {
 }
 
 button {
-  background-color: #5e7a7d;
-  color: #00494d;
+  background-color: #00494d;
+  color: white;
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: 700;
@@ -115,6 +89,7 @@ button {
 
 button:hover {
   background-color: #c5e4e7;
+  color: #00494d;
   cursor: pointer;
 }
 
@@ -165,5 +140,14 @@ button:hover {
 
 .flex .warning {
   visibility: hidden;
+}
+
+#reset-button {
+  background-color: #26c0ab;
+}
+
+.active {
+  background-color: #26c0ab;
+  color: #00494d;
 }
 /*# sourceMappingURL=styles.css.map */

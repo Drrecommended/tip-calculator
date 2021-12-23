@@ -11,8 +11,20 @@ const setBillValue = () => {
 };
 
 const clickHandler = (e) => {
-  console.log(e.target);
-  
+  //   let clickedButtonValue = e.target.attributes["data-value"].value;
+  let selectedButton = e.target;
+  buttons.forEach((button) => {
+    button.classList.remove('active')
+    if(button.value == selectedButton.value) {
+        selectedButton.classList.add('active')
+    }
+
+    
+  });
+
+  if (setPersonCount >= 0) {
+    console.log("this is good");
+  }
 };
 
 const setCustomPercent = () => {
@@ -20,18 +32,17 @@ const setCustomPercent = () => {
 };
 
 const setPersonCount = () => {
-  return console.log(personCount.value);
+  return personCount.value;
 };
 
 const resetHandler = () => {
-    console.log('clicked')
-}
-
+  console.log("clicked");
+};
 
 bill.addEventListener("input", setBillValue);
 buttons.forEach((button) => {
   button.addEventListener("click", clickHandler);
 });
 custumPercent.addEventListener("input", setCustomPercent);
-personCount.addEventListener('input', setPersonCount)
-resetButton.addEventListener('click', resetHandler)
+personCount.addEventListener("input", setPersonCount);
+resetButton.addEventListener("click", resetHandler);
