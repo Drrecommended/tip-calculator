@@ -48,12 +48,11 @@ label {
   padding-bottom: 0.8em;
 }
 
-input {
+.input {
   background-color: #f4fafa;
-  border: none;
+  border-style: none;
   font-size: 24px;
   border-radius: 5px;
-  border-style: none;
   padding: 0.3em;
   padding-right: 0.7em;
   color: #00494d;
@@ -62,12 +61,17 @@ input {
   margin-bottom: 1em;
 }
 
-input:focus {
+.input .border-warning {
+  border: solid #c9775d;
+  border-width: 1px;
+}
+
+.input:focus {
   outline: solid 1px;
   border-color: #719ece;
 }
 
-input::placeholder {
+.input::placeholder {
   color: #c5e4e7;
 }
 
@@ -140,6 +144,7 @@ button:hover {
 
 .flex .warning {
   visibility: hidden;
+  color: #c9775d;
 }
 
 #reset-button {

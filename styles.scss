@@ -60,18 +60,21 @@ label {
   padding-bottom: 0.8em;
 }
 
-input {
+.input {
   background-color: $light-cyan__light;
-  border: none;
+  border-style: none;
   font-size: $input-font;
   border-radius: $border-radius2;
-  border-style: none;
   padding: 0.3em;
   padding-right: 0.7em;
   color: $very__dark-cyan;
   width: 100%;
   font-weight: 700;
   margin-bottom: 1em;
+  .border-warning {
+    border: solid #c9775d;
+    border-width: 1px;
+  }
   &:focus {
     outline: solid 1px;
     border-color: #719ece;
@@ -143,6 +146,7 @@ button {
   justify-content: space-between;
   .warning {
     visibility: hidden;
+    color: #c9775d;
   }
 }
 
