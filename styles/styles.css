@@ -35,9 +35,9 @@ main {
 
 .icon-container img {
   position: absolute;
-  left: 1rem;
+  left: 1.8rem;
   pointer-events: none;
-  top: 3rem;
+  top: 3.6rem;
 }
 
 label {
@@ -48,7 +48,7 @@ label {
   padding-bottom: 0.8em;
 }
 
-.input {
+.input-style {
   background-color: #f4fafa;
   border-style: none;
   font-size: 24px;
@@ -61,18 +61,29 @@ label {
   margin-bottom: 1em;
 }
 
-.input .border-warning {
-  border: solid #c9775d;
-  border-width: 1px;
+.input-style .border-warning {
+  border-style: visible;
+  border: solid 2px #c9775d;
 }
 
-.input:focus {
-  outline: solid 1px;
-  border-color: #719ece;
+.input-style:focus {
+  outline: solid 2px #26c0ab;
+  border-color: #26c0ab;
+  outline-offset: -1px;
 }
 
-.input::placeholder {
+.input-style::placeholder {
   color: #c5e4e7;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 body {
@@ -149,6 +160,11 @@ button:hover {
 
 #reset-button {
   background-color: #26c0ab;
+}
+
+#reset-button:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
 }
 
 .active {

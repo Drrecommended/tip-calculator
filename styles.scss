@@ -46,9 +46,9 @@ main {
   }
   img {
     position: absolute;
-    left: 1rem;
+    left: 1.8rem;
     pointer-events: none;
-    top: 3rem;
+    top: 3.6rem;
   }
 }
 
@@ -60,7 +60,8 @@ label {
   padding-bottom: 0.8em;
 }
 
-.input {
+//INPUT STYLES///////////////////////////////////
+.input-style {
   background-color: $light-cyan__light;
   border-style: none;
   font-size: $input-font;
@@ -72,16 +73,27 @@ label {
   font-weight: 700;
   margin-bottom: 1em;
   .border-warning {
-    border: solid #c9775d;
-    border-width: 1px;
+    border-style: visible;
+    border: solid 2px #c9775d;
   }
   &:focus {
-    outline: solid 1px;
-    border-color: #719ece;
+    outline: solid 2px $primary;
+    border-color: $primary;
+    outline-offset: -1px;
   }
   &::placeholder {
     color: $light-cyan__dark;
   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 body {
@@ -152,6 +164,10 @@ button {
 
 #reset-button {
   background-color: $primary;
+  &:hover {
+    background-color: $light-cyan__dark;
+    color: $very__dark-cyan;
+  }
 }
 
 .active {

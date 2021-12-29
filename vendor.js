@@ -27,20 +27,19 @@ const clickHandler = (e) => {
   calculateResult(selectedButton);
 };
 
-const calculateResult = (b) => {
-  console.log(b.attributes["data-value"].value);
-  //  totalPerperson.innerHTML = `$${}`
 
-  let currentCount = setPersonCount();
-  if (currentCount) {
+const calculateResult = (b) => {
+  let currentPersonCount = setPersonCount();
+  if (currentPersonCount) {
     document.querySelector(".warning").style.visibility = "hidden";
-  } else if (!currentCount || currentCount == 0) {
+  } else if (!currentPersonCount || currentPersonCount == 0) {
     personCount.classList.add("border-warning")
+    personCount.style.borderC
     // personCount.style.border = "1px solid #c9775d"
     document.querySelector(".warning").style.visibility = "visible";
-    currentCount = DEFAULT_PERSON_COUNT;
+    currentPersonCount = DEFAULT_PERSON_COUNT;
   }
-  console.log("her");
+  console.log(currentPersonCount)
 };
 
 const setCustomPercent = () => {
