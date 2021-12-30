@@ -44,7 +44,7 @@ label {
   font-size: 1rem;
   color: #7f9c9f;
   position: relative;
-  display: inline-block;
+  display: block;
   padding-bottom: 0.8em;
 }
 
@@ -61,7 +61,7 @@ label {
   margin-bottom: 1em;
 }
 
-.input-style .border-warning {
+.input-style.border-warning {
   border-style: visible;
   border: solid 2px #c9775d;
 }

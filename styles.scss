@@ -56,7 +56,7 @@ label {
   font-size: 1rem;
   color: $dark-cyan__ligt;
   position: relative;
-  display: inline-block;
+  display: block;
   padding-bottom: 0.8em;
 }
 
@@ -72,7 +72,7 @@ label {
   width: 100%;
   font-weight: 700;
   margin-bottom: 1em;
-  .border-warning {
+  &.border-warning {
     border-style: visible;
     border: solid 2px #c9775d;
   }

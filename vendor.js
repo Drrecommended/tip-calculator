@@ -5,15 +5,37 @@ const personCount = document.getElementById("person-count");
 const tipPerPerson = document.getElementById("tip-per-person");
 const totalPerperson = document.getElementById("total-per-person");
 const resetButton = document.getElementById("reset-button");
+const userInputs = document.querySelectorAll("input");
+const warningLabel = document.querySelector(".warning");
 
 const DEFAULT_PERSON_COUNT = 1;
 
-const setBillValue = () => {
-  return console.log(bill.value);
+//Functions to grab the bill value
+const getBillValue = () => {
+  return bill.value;
 };
 
+const getCustomPercent = () => {
+  return custumPercent.value;
+};
+
+const getPersonCount = () => {
+  return personCount.value;
+};
+
+//Function to update the UI
+const updateUI = (pCount) => {
+  if (pCount) {
+    warningLabel.style.visibility = "hidden";
+  } else if (!pCount || pCount == 0) {
+    personCount.classList.add("border-warning");
+    document.querySelector(".warning").style.visibility = "visible";
+    pCount = DEFAULT_PERSON_COUNT;
+  }
+};
+
+//Percent button click handler
 const clickHandler = (e) => {
-  //   let clickedButtonValue = e.target.attributes["data-value"].value;
   let selectedButton = e.target;
   buttons.forEach((button) => {
     button.classList.remove("active");
@@ -21,43 +43,43 @@ const clickHandler = (e) => {
       selectedButton.classList.add("active");
     }
   });
-
-  //   personCount.value = ""
-
   calculateResult(selectedButton);
 };
 
+const displayResult = (total) => {
+  tipPerPerson.innerHTML = `$${tipPerPersonTotal}`
+  totalPerperson.innerHTML = `$${total}`
+}
 
-const calculateResult = (b) => {
-  let currentPersonCount = setPersonCount();
-  if (currentPersonCount) {
-    document.querySelector(".warning").style.visibility = "hidden";
-  } else if (!currentPersonCount || currentPersonCount == 0) {
-    personCount.classList.add("border-warning")
-    personCount.style.borderC
-    // personCount.style.border = "1px solid #c9775d"
-    document.querySelector(".warning").style.visibility = "visible";
-    currentPersonCount = DEFAULT_PERSON_COUNT;
+
+
+const calculateResult = () => {
+  let currentBillAmount = getBillValue();
+  let currentCustomPercent = getCustomPercent();
+  let currentPersonCount = getPersonCount();
+  if (currentBillAmount === "" || currentCustomPercent === 0) {
+    return;
   }
-  console.log(currentPersonCount)
+  let total = (currentBillAmount * currentCustomPercent) / currentPersonCount;
+  console.log(total)
+  displayResult(total)
+  updateUI(currentPersonCount);
 };
 
-const setCustomPercent = () => {
-  console.log(custumPercent.value);
+const resetInputs = () => {
+  for (const input of userInputs) {
+    input.value = "";
+  }
+  for (const button of buttons) {
+    button.classList.remove("active");
+  }
+  updateUI();
 };
 
-const setPersonCount = () => {
-  return personCount.value;
-};
-
-const resetHandler = () => {
-  console.log("clicked");
-};
-
-bill.addEventListener("input", setBillValue);
+bill.addEventListener("input", getBillValue);
 buttons.forEach((button) => {
   button.addEventListener("click", clickHandler);
 });
-custumPercent.addEventListener("input", setCustomPercent);
-personCount.addEventListener("input", setPersonCount);
-resetButton.addEventListener("click", resetHandler);
+custumPercent.addEventListener("input", getCustomPercent);
+personCount.addEventListener("input", getPersonCount);
+resetButton.addEventListener("click", resetInputs);
