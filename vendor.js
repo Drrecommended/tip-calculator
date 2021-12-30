@@ -10,12 +10,17 @@ const warningLabel = document.querySelector(".warning");
 
 const DEFAULT_PERSON_COUNT = 1;
 
+let n = "111111111"
+
+console.log()
 //Functions to grab the bill value
 const getBillValue = () => {
-  return bill.value;
+  console.log(typeof +bill.value)
+  return +bill.value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 };
 
 const getCustomPercent = () => {
+  console.log(custumPercent.value)
   return custumPercent.value;
 };
 
@@ -35,7 +40,7 @@ const updateUI = (pCount) => {
 };
 
 //Percent button click handler
-const clickHandler = (e) => {
+const percentButtonHandler = (e) => {
   let selectedButton = e.target;
   buttons.forEach((button) => {
     button.classList.remove("active");
@@ -46,8 +51,8 @@ const clickHandler = (e) => {
   calculateResult(selectedButton);
 };
 
-const displayResult = (total) => {
-  tipPerPerson.innerHTML = `$${tipPerPersonTotal}`
+const displayResult = (total, percent) => {
+  tipPerPerson.innerHTML = `$${((100 * percent) / total).toFixed()}`
   totalPerperson.innerHTML = `$${total}`
 }
 
@@ -62,7 +67,7 @@ const calculateResult = () => {
   }
   let total = (currentBillAmount * currentCustomPercent) / currentPersonCount;
   console.log(total)
-  displayResult(total)
+  displayResult(total, currentCustomPercent)
   updateUI(currentPersonCount);
 };
 
@@ -73,12 +78,11 @@ const resetInputs = () => {
   for (const button of buttons) {
     button.classList.remove("active");
   }
-  updateUI();
 };
 
 bill.addEventListener("input", getBillValue);
 buttons.forEach((button) => {
-  button.addEventListener("click", clickHandler);
+  button.addEventListener("click", percentButtonHandler);
 });
 custumPercent.addEventListener("input", getCustomPercent);
 personCount.addEventListener("input", getPersonCount);
