@@ -33,14 +33,14 @@ h1 {
 
 main {
   background-color: $white;
-  padding: 1.7em;
+  padding: 1.5em;
   border-radius: $border-radius1;
   min-height: 0%;
+  max-width: 700px;
 }
 
 .icon-container {
   position: relative;
-  padding: 0.6em;
   input {
     background-color: $light-cyan__light;
   }
@@ -69,9 +69,9 @@ label {
   padding: 0.3em;
   padding-right: 0.7em;
   color: $very__dark-cyan;
-  width: 100%;
+  width: 320px;
+  margin: 0 auto;
   font-weight: 700;
-  margin-bottom: 1em;
   &.border-warning {
     border-style: visible;
     border: solid 2px #c9775d;
@@ -80,7 +80,7 @@ label {
     outline: solid 2px $primary;
     border-color: $primary;
     outline-offset: -1px;
-  }
+  }  
   &::placeholder {
     color: $light-cyan__dark;
   }
@@ -94,6 +94,10 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+#custom-percent {
+  width: 150px;
 }
 
 body {
@@ -115,6 +119,10 @@ button {
     color: $very__dark-cyan;
     cursor: pointer;
   }
+}
+
+#percent-buttons {
+  width: 150px;
 }
 
 .result__container {
@@ -154,8 +162,10 @@ button {
 }
 
 .flex {
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-evenly;
   .warning {
     visibility: hidden;
     color: #c9775d;
@@ -163,10 +173,11 @@ button {
 }
 
 #reset-button {
-  background-color: $primary;
+  background-color: $dark-cyan__dark;
   &:hover {
     background-color: $light-cyan__dark;
     color: $very__dark-cyan;
+    
   }
 }
 

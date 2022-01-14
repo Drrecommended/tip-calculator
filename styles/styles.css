@@ -19,14 +19,14 @@ h1 {
 
 main {
   background-color: white;
-  padding: 1.7em;
+  padding: 1.5em;
   border-radius: 15px;
   min-height: 0%;
+  max-width: 700px;
 }
 
 .icon-container {
   position: relative;
-  padding: 0.6em;
 }
 
 .icon-container input {
@@ -56,9 +56,9 @@ label {
   padding: 0.3em;
   padding-right: 0.7em;
   color: #00494d;
-  width: 100%;
+  width: 320px;
+  margin: 0 auto;
   font-weight: 700;
-  margin-bottom: 1em;
 }
 
 .input-style.border-warning {
@@ -86,6 +86,10 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+#custom-percent {
+  width: 150px;
+}
+
 body {
   background-color: #c5e4e7;
 }
@@ -106,6 +110,10 @@ button:hover {
   background-color: #c5e4e7;
   color: #00494d;
   cursor: pointer;
+}
+
+#percent-buttons {
+  width: 150px;
 }
 
 .result__container {
@@ -149,8 +157,10 @@ button:hover {
 }
 
 .flex {
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-evenly;
 }
 
 .flex .warning {
@@ -159,7 +169,7 @@ button:hover {
 }
 
 #reset-button {
-  background-color: #26c0ab;
+  background-color: #5e7a7d;
 }
 
 #reset-button:hover {
