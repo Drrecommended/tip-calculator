@@ -54,6 +54,10 @@ const getBillValue = (e) => {
 
 const getCustomPercent = () => {
   console.log(custumPercent.value)
+  //if input number is greater than 99 reset input
+  if(custumPercent.value > 99) {
+    custumPercent.value = ""
+  }
   return custumPercent.value
 }
 

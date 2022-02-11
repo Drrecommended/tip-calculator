@@ -13,13 +13,13 @@ h1 {
   font-size: 1.3rem;
   line-height: 1.5em;
   text-transform: uppercase;
-  color: #5e7a7d;
+  color: #00494d;
   font-weight: 700;
 }
 
 main {
   background-color: white;
-  padding: 1.5em;
+  padding: 2.2em 1.5em 1.5em 1.5em;
   border-radius: 15px;
   min-height: 0%;
   max-width: 700px;
@@ -42,6 +42,7 @@ main {
 
 label {
   font-size: 1rem;
+  font-weight: 600;
   color: #7f9c9f;
   position: relative;
   display: block;
@@ -156,13 +157,6 @@ button:hover {
   font-size: 2rem;
 }
 
-.flex {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: space-evenly;
-}
-
 .flex .warning {
   visibility: hidden;
   color: #c9775d;
@@ -170,6 +164,7 @@ button:hover {
 
 #reset-button {
   background-color: #5e7a7d;
+  color: #00494d;
 }
 
 #reset-button:hover {

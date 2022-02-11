@@ -27,13 +27,13 @@ h1 {
   font-size: 1.3rem;
   line-height: 1.5em;
   text-transform: uppercase;
-  color: $dark-cyan__dark;
+  color: $very__dark-cyan;
   font-weight: 700;
 }
 
 main {
   background-color: $white;
-  padding: 1.5em;
+  padding: 2.2em 1.5em 1.5em 1.5em;
   border-radius: $border-radius1;
   min-height: 0%;
   max-width: 700px;
@@ -54,6 +54,7 @@ main {
 
 label {
   font-size: 1rem;
+  font-weight: 600;
   color: $dark-cyan__ligt;
   position: relative;
   display: block;
@@ -162,10 +163,7 @@ button {
 }
 
 .flex {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: space-evenly;
+
   .warning {
     visibility: hidden;
     color: #c9775d;
@@ -174,6 +172,7 @@ button {
 
 #reset-button {
   background-color: $dark-cyan__dark;
+  color: $very__dark-cyan;
   &:hover {
     background-color: $light-cyan__dark;
     color: $very__dark-cyan;
