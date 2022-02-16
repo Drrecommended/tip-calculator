@@ -39,7 +39,14 @@ main {
   max-width: 700px;
 }
 
+.container {
+  margin: auto;
+  width: 316px;
+  // background-color: red;
+}
+
 .icon-container {
+  padding-bottom: 2em;
   position: relative;
   input {
     background-color: $light-cyan__light;
@@ -61,17 +68,17 @@ label {
   padding-bottom: 0.8em;
 }
 
+
+
+
 //INPUT STYLES///////////////////////////////////
 .input-style {
   background-color: $light-cyan__light;
   border-style: none;
   font-size: $input-font;
   border-radius: $border-radius2;
-  padding: 0.3em;
-  padding-right: 0.7em;
+  padding: 0.2em;
   color: $very__dark-cyan;
-  width: 320px;
-  margin: 0 auto;
   font-weight: 700;
   &.border-warning {
     border-style: visible;
@@ -99,8 +106,17 @@ input[type="number"] {
 
 #custom-percent {
   width: 150px;
+  padding-right: 20px;
+  &::placeholder { 
+    color: $dark-cyan__dark;
+  }
 }
 
+
+
+
+
+//other styles
 body {
   background-color: $light-cyan__dark;
 }
@@ -163,11 +179,19 @@ button {
 }
 
 .flex {
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1em;
   .warning {
     visibility: hidden;
     color: #c9775d;
   }
+}
+
+.pad {
+  padding-top: .5em;
+  padding-bottom: 2em;
 }
 
 #reset-button {

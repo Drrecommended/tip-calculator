@@ -25,7 +25,13 @@ main {
   max-width: 700px;
 }
 
+.container {
+  margin: auto;
+  width: 316px;
+}
+
 .icon-container {
+  padding-bottom: 2em;
   position: relative;
 }
 
@@ -54,11 +60,8 @@ label {
   border-style: none;
   font-size: 24px;
   border-radius: 5px;
-  padding: 0.3em;
-  padding-right: 0.7em;
+  padding: 0.2em;
   color: #00494d;
-  width: 320px;
-  margin: 0 auto;
   font-weight: 700;
 }
 
@@ -89,6 +92,11 @@ input[type="number"] {
 
 #custom-percent {
   width: 150px;
+  padding-right: 20px;
+}
+
+#custom-percent::placeholder {
+  color: #5e7a7d;
 }
 
 body {
@@ -157,9 +165,21 @@ button:hover {
   font-size: 2rem;
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+
 .flex .warning {
   visibility: hidden;
   color: #c9775d;
+}
+
+.pad {
+  padding-top: .5em;
+  padding-bottom: 2em;
 }
 
 #reset-button {
