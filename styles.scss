@@ -20,6 +20,14 @@ $input-font: 24px;
   font-family: "Space Mono", monospace;
 }
 
+/* ////////////////////////
+
+       Typography 
+
+/////////////////////////*/
+
+
+
 h1 {
   text-align: center;
   padding: 1.4em;
@@ -31,19 +39,20 @@ h1 {
   font-weight: 700;
 }
 
+
+
 main {
+  margin: 0 auto;
+  width: 316px;
   background-color: $white;
   padding: 2.2em 1.5em 1.5em 1.5em;
   border-radius: $border-radius1;
   min-height: 0%;
   max-width: 700px;
-}
-
-.container {
-  margin: auto;
-  width: 316px;
   // background-color: red;
 }
+
+
 
 .icon-container {
   padding-bottom: 2em;
