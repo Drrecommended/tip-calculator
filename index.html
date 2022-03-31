@@ -1,112 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Tip calculator app</title>
-
-    <link rel="stylesheet" href="styles/styles.css" />
-    <script src="vendor.js" defer></script>
-    <!-- <script src="index.js" defer></script> -->
-  </head>
-  <body>
-    <!--Header-->
-
-    <h1 class="">Spli<br />tter</h1>
-
-    <!--Calculator-->
-
-    <main>
-      <!--Bill Total-->
-      <div class="icon-container">
-        <label>Bill</label>
-        <input
-          type="number"
-          placeholder="0"
-          class="input-style"
-          dir="rtl"
-          id="bill"
-          max="1.00"
-          step="0.01"
-        />
-        <img src="./images/icon-dollar.svg" alt="" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- displays site properly based on user's device -->
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png"
+         />
+      <title>Frontend Mentor | Tip calculator app</title>
+      <link rel="stylesheet" type="text/css" href="styles/styles.css">
+      <script src="index.js" defer></script>
+      <!-- <script src="index.js" defer></script> -->
+   </head>
+   <body>
+      <!--Header-->
+      <h1 class="">Spli<br />tter</h1>
+      <!--Calculator-->
+      <main>
+         <!--Bill Total-->
+         <div class="icon-container">
+            <label>Bill</label>
+            <input
+               type="number"
+               placeholder="0"
+               class="input"
+               dir="rtl"
+               id="bill-input"
+               min="0"
+               step="0.01"
+               />
+            <img src="./images/icon-dollar.svg" alt="" />
+         </div>
+         <!--select amount to tip section-->
+         <label>Select Tip %</label>
+         <div class="flex pad">
+            <button id="percent-buttons" data-value="5">5%</button>
+            <button id="percent-buttons" data-value="10">10%</button>
+            <button id="percent-buttons" data-value="15">15%</button>
+            <button id="percent-buttons" data-value="25">25%</button>
+            <button id="percent-buttons" data-value="50">50%</button>
+            <input
+               type="number"
+               data-percent
+               class="input"
+               placeholder="Custom"
+               id="custom-percent-input"
+               dir="rtl"
+               maxlength="10"
+               step="1"
+               min="0"
+               max="100"
+               />
+         </div>
+         <!--number of people section-->
+         <div class="icon-container">
+            <div class="flex">
+               <label>Number of People</label>
+               <label class="warning">Can't be zero</label>
+            </div>
+            <input
+               type="number"
+               placeholder="0"
+               class="input"
+               id="guest-count-input"
+               dir="rtl"
+               min="0"
+               />
+            <img src="./images/icon-person.svg" alt="" />
+         </div>
+         <!--results-->
+         <div class="result__container">
+            <div class="inner-result__container">
+               <div>
+                  <p class="amount">Tip Amount</p>
+                  <p class="person">/ person</p>
+               </div>
+               <p class="number" id="tip-per-person" data-tip>$0.00</p>
+            </div>
+            <div class="inner-result__container">
+               <div>
+                  <p class="amount">Total</p>
+                  <p class="person">/ person</p>
+               </div>
+               <p class="number" id="total-per-person" data-total>$0.00</p>
+            </div>
+            <button id="reset-button">reset</button>
+         </div>
+      </main>
+      <div class="attribution">
+         Challenge by
+         <a href=https://www.frontendmentor.io?ref=challenge target="_blank"
+            >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
       </div>
-
-      <!--select amount to tip section-->
-
-      <label>Select Tip %</label>
-      <div class="flex pad">
-        <button id="percent-buttons" data-value="5">5%</button>
-        <button id="percent-buttons" data-value="10">10%</button>
-        <button id="percent-buttons" data-value="15">15%</button>
-        <button id="percent-buttons" data-value="25">25%</button>
-        <button id="percent-buttons" data-value="50">50%</button>
-        <input
-          type="number"
-          data-percent
-          class="input-style"
-          placeholder="Custom"
-          id="custom-percent"
-          dir="rtl"
-          maxlength="10"
-          step="1.00"
-          min="0"
-          max="10"
-        />
-      </div>
-
-      <!--number of people section-->
-
-      <div class="icon-container">
-        <div class="flex">
-          <label>Number of People</label>
-          <label class="warning">Can't be zero</label>
-        </div>
-        <input
-          type="number"
-          placeholder="0"
-          class="input-style"
-          id="person-count"
-          dir="rtl"
-        />
-        <img src="./images/icon-person.svg" alt="" />
-      </div>
-
-      <!--results-->
-
-      <div class="result__container">
-        <div class="inner-result__container">
-          <div>
-            <p class="amount">Tip Amount</p>
-            <p class="person">/ person</p>
-          </div>
-          <p class="number" id="tip-per-person" data-tip>$0.00</p>
-        </div>
-        <div class="inner-result__container">
-          <div>
-            <p class="amount">Total</p>
-            <p class="person">/ person</p>
-          </div>
-          <p class="number" id="total-per-person" data-total>$0.00</p>
-        </div>
-        <button id="reset-button">reset</button>
-      </div>
-    </main>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </body>
+   </body>
 </html>
