@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap');
+
+/* ===============
+variables
+================ */
 
 $primary: hsl(172, 67%, 45%);
 $dark-cyan__ligt: hsl(184, 14%, 56%);
@@ -13,11 +17,51 @@ $border-radius1: 15px;
 $border-radius2: 5px;
 $input-font: 24px;
 
-* {
-  margin: 0;
-  padding: 0;
+
+body {
+  background-color: $light-cyan__dark;
+  font-family: 'Space Mono', monospace;
   box-sizing: border-box;
-  font-family: "Space Mono", monospace;
-  background-color: black;
 }
 
+main {
+  background-color: $white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+/* ===============
+typography
+================ */
+
+h1 {
+  text-align: center;
+}
+
+p {
+  display: inline-block;
+}
+
+
+button {
+  background-color: $very__dark-cyan;
+}
+
+.result__container {
+  background-color: $very__dark-cyan;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    display: flex;
+  }
+
+  .result__container {
+    width: 50%;
+  }
+
+  .input-container {
+    width: 50%;
+  }
+}

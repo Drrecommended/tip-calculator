@@ -20,6 +20,8 @@ const getAndPadBill = () => {
   calculateBill()
 }
 
+
+
 // Get percent of the button that was pressed
 
 const percentButtonHandler = (e) => {
