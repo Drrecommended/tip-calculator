@@ -18,10 +18,12 @@ $border-radius2: 5px;
 $input-font: 24px;
 
 
+
 body {
   background-color: $light-cyan__dark;
   font-family: 'Space Mono', monospace;
   box-sizing: border-box;
+
 }
 
 main {
@@ -37,6 +39,10 @@ typography
 
 h1 {
   text-align: center;
+  color: $dark-cyan__dark;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  padding-top: 2em;
 }
 
 p {
@@ -51,6 +57,41 @@ button {
 .result__container {
   background-color: $very__dark-cyan;
 }
+
+.amount {
+  color: $white;
+}
+
+/* ===================
+input styles
+==================== */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+input {
+  color: $very__dark-cyan;
+  background-color: $light-cyan__light;
+  border-style: none;
+  font-size: $input-font;
+  padding: .2em;
+  width: 100%;
+}
+
+img {
+  position: absolute;
+}
+
 
 @media screen and (min-width: 600px) {
   main {

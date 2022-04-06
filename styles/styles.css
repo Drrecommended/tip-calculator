@@ -20,6 +20,10 @@ typography
 ================ */
 h1 {
   text-align: center;
+  color: #5e7a7d;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  padding-top: 2em;
 }
 
 p {
@@ -32,6 +36,38 @@ button {
 
 .result__container {
   background-color: #00494d;
+}
+
+.amount {
+  color: white;
+}
+
+/* ===================
+input styles
+==================== */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+  color: #00494d;
+  background-color: #f4fafa;
+  border-style: none;
+  font-size: 24px;
+  padding: .2em;
+  width: 100%;
+}
+
+img {
+  position: absolute;
 }
 
 @media screen and (min-width: 600px) {
