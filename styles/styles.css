@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap");
-/* ===============
+/*===============
 variables
-================ */
+================*/
 body {
   background-color: #c5e4e7;
   font-family: 'Space Mono', monospace;
@@ -13,7 +13,20 @@ main {
   background-color: white;
   max-width: 800px;
   margin: 0 auto;
-  padding: 2em;
+  padding: 1.4em;
+}
+
+.reset-button {
+  background-color: white;
+  color: #00494d;
+  opacity: 20%;
+  border-style: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 13px;
+  padding: .8em;
+  text-transform: uppercase;
 }
 
 /* ===============
@@ -31,16 +44,41 @@ p {
   display: inline-block;
 }
 
+.amount {
+  width: 100%;
+}
+
+.number {
+  margin: 0;
+  color: #26c0ab;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
 button {
   background-color: #00494d;
 }
 
 .result__container {
   background-color: #00494d;
+  padding: 2em 1.4em 1.4em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 310px;
+  border-radius: 12px;
 }
 
 .amount {
   color: white;
+  margin: 0;
+}
+
+.amount span {
+  margin-top: 6px;
+  display: block;
+  font-size: .8em;
+  opacity: 50%;
 }
 
 /* ===================
@@ -76,6 +114,12 @@ img {
   bottom: 0;
   text-align: center;
   width: 100%;
+}
+
+.inner-result__container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 600px) {
