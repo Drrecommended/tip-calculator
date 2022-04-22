@@ -6,11 +6,12 @@ body {
   background-color: #c5e4e7;
   font-family: 'Space Mono', monospace;
   box-sizing: border-box;
+  height: 100vh;
 }
 
 main {
   background-color: white;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2em;
 }
@@ -70,15 +71,23 @@ img {
   position: absolute;
 }
 
+.attribution {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
 @media screen and (min-width: 600px) {
   main {
     display: flex;
+    gap: 10%;
   }
   .result__container {
     width: 50%;
   }
   .input-container {
-    width: 50%;
+    width: 40%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
