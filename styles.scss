@@ -13,8 +13,9 @@ $very__dark-cyan: hsl(183, 100%, 15%);
 $white: hsl(0, 0%, 100%);
 $pad1: 1.5em;
 $pad2: 0.5em 0;
-$border-radius1: 15px;
-$border-radius2: 5px;
+$border-radius1: 5px;
+$border-radius2: 12px;
+$border-radius: 22px;
 $input-font: 24px;
 
 
@@ -28,9 +29,10 @@ body {
 
 main {
   background-color: $white;
-  max-width: 800px;
+  max-width: 825px;
   margin: 0 auto;
   padding: 1.4em;
+  border-radius: $border-radius;
 }
 
 .reset-button {
@@ -73,7 +75,13 @@ p {
   font-size: 2rem;
 }
 
-button {
+.percent-btn {
+  font-size: 1.3rem;
+  padding: .4em 1.6em;
+  border-style: none;
+  border-radius: $border-radius1;
+  font-weight: 500;
+  color: $white;
   background-color: $very__dark-cyan;
 }
 
@@ -84,7 +92,7 @@ button {
   justify-content: space-between;
   flex-direction: column;
   max-width: 310px;
-  border-radius: 12px;
+  border-radius: $border-radius2;
 }
 
 .amount {
@@ -122,6 +130,7 @@ input {
   font-size: $input-font;
   padding: .2em;
   width: 100%;
+  border-radius: $border-radius1;
 }
 
 img {
@@ -141,6 +150,12 @@ img {
   margin-bottom: 20px;
 }
 
+.input-container {
+  max-width: 350px;
+  padding: 0 1em;
+}
+
+
 @media screen and (min-width: 600px) {
   main {
     display: flex;
@@ -151,7 +166,4 @@ img {
     width: 50%;
   }
 
-  .input-container {
-    width: 40%;
-  }
 }
