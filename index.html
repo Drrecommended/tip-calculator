@@ -22,7 +22,7 @@
     <main>
       <!--Bill Total-->
       <div class="input-container">
-        <p>Bill</p>
+        <p class="input-title">Bill</p>
         <div class="icon-container">
           <img src="./images/icon-dollar.svg" alt="" />
           <input
@@ -36,8 +36,8 @@
           />
         </div>
         <!--select amount to tip section-->
-        <p>Select Tip %</p>
-        <div class="flex pad">
+        <p class="input-title">Select Tip %</p>
+        <div class="percent-container">
           <button class="percent-btn" id="percent-buttons" data-value="5">5%</button>
           <button class="percent-btn" id="percent-buttons" data-value="10">10%</button>
           <button class="percent-btn" id="percent-buttons" data-value="15">15%</button>
@@ -46,7 +46,7 @@
           <input
             type="number"
             data-percent
-            class="input"
+            class="input custom-input"
             placeholder="Custom"
             id="custom-percent-input"
             dir="rtl"
@@ -57,8 +57,8 @@
           />
         </div>
         <!--number of people section-->
-        <p>Number of People</p>
-        <p class="warning">Can't be zero</p>
+        <p class="input-title">Number of People</p>
+        <p class="warning input-title">Can't be zero</p>
         <div class="icon-container">
           <img src="./images/icon-person.svg" alt="" />
           <input
