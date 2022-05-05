@@ -84,9 +84,15 @@ p {
   color: #00494d;
 }
 
+.active {
+  background-color: #26c0ab;
+  color: #00494d;
+  opacity: 100%;
+}
+
 .percent-btn,
 .custom-input {
-  width: 145px;
+  width: clamp(100px, 60%, 145px);
 }
 
 .result__container {
@@ -192,6 +198,10 @@ input:focus {
   flex-wrap: wrap;
   gap: 17px;
   padding-top: 10px;
+}
+
+.margin {
+  margin-bottom: 1.5em;
 }
 
 @media screen and (min-width: 600px) {

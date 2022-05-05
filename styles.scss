@@ -100,9 +100,16 @@ p {
   }
 }
 
+.active {
+  background-color: $primary;
+  color: $very__dark-cyan;
+  opacity: 100%;
+}
+
+
 .percent-btn,
 .custom-input {
-  width: 145px;
+  width: clamp( 100px, 60%, 145px);
 }
 
 .result__container {
@@ -164,10 +171,8 @@ input {
   &:focus {
     outline: none !important;
     border: 2px solid $primary;
-
   }
 }
-
 
 .custom-input {
   &::placeholder {
@@ -210,6 +215,10 @@ input {
   flex-wrap: wrap;
   gap: 17px;
   padding-top: 10px;
+}
+
+.margin {
+  margin-bottom: 1.5em;
 }
 
 @media screen and (min-width: 600px) {

@@ -16,17 +16,15 @@ const getAndPadBill = () => {
     amount = parseFloat(billInput.value)
     billInput.value = amount.toFixed(2)
   }
-
+  updateUI()
   calculateBill()
 }
-
-
 
 // Get percent of the button that was pressed
 
 const percentButtonHandler = (e) => {
   const percent = e.target.dataset.value
-
+  updateUI(e)
   calculateBill(percent)
 }
 
@@ -57,6 +55,15 @@ const getGuestCount = () => {
 const updateUI = (percent) => {
   const warningLabel = document.querySelector('.warning')
   const guests = parseInt(guestCount.value)
+
+  // If bill > 0 add active class to reset button
+  if(billInput.value > 0 || guests > 0) {
+    resetButton.classList.add('active')
+  } else {
+    resetButton.classList.remove('active')
+  }
+
+
 
   // If percent go over all buttons and update the UI
   percentButtons.forEach((button) => {
@@ -97,7 +104,6 @@ const calculateBill = (percent) => {
 
     displayBill(tip, total)
   }
-
 }
 
 // Display Bill
