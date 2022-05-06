@@ -39,11 +39,13 @@ main {
   opacity: 20%;
   border-style: none;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
   font-weight: 700;
-  margin-top: 13px;
+  margin-top: 4px;
   padding: 0.8em;
   text-transform: uppercase;
+  width: 100%;
 }
 
 /* ===============
@@ -80,7 +82,7 @@ p {
 .number {
   margin: 0;
   color: $primary;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 2rem;
 }
 
@@ -108,17 +110,22 @@ p {
 
 .percent-btn,
 .custom-input {
-  width: clamp(100px, 60%, 145px);
+  width: clamp(100px, 145px, 50%);
 }
 
 .result__container {
   background-color: $very__dark-cyan;
-  padding: 2em 1.4em 1.4em;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  max-width: 310px;
+  padding: 2.5em 1.4em 1.4em;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-direction: column;
+  position: relative;
   border-radius: $border-radius2;
+  .inner-result__container {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
 }
 
 .amount {
@@ -182,6 +189,8 @@ input {
 
 .input-container {
   position: relative;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   img {
     position: absolute;
     margin-top: 18px;
@@ -206,22 +215,10 @@ input {
   width: 100%;
 }
 
-.inner-result__container {
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 20px;
-}
-
-.input-container {
-  width: 95%;
-  max-width: 350px;
-  margin: 0 auto;
-}
-
 .percent-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 17px;
+  gap: 1rem;
   padding-top: 10px;
 }
 
@@ -236,12 +233,54 @@ input {
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 610px) {
   main {
     display: flex;
   }
 
   .result__container {
-    width: 50%;
+    width: 360px;
+
+    .container {
+      padding-top: .5em;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .inner-result__container:first-of-type {
+      margin-bottom: 3em;
+    }
+  }
+
+  .number {
+    font-size: 2.7rem;
+  }
+
+  .input-container {
+    width: 400px;
+    padding-right: 3em;
+    .percent-container {
+      gap: 0.8rem;
+    }
+    .person-input {
+      margin-bottom: 0.8em;
+    }
+  }
+
+  .percent-btn,
+  .custom-input {
+    width: 116px;
+  }
+
+  .reset-button {
+    position: absolute;
+    bottom: 35px;
+    width: 80%;
+    display: block;
+  }
+
+  h1 {
+    margin-top: 7em;
+    margin-bottom: 4em;
   }
 }
