@@ -57,13 +57,11 @@ const updateUI = (percent) => {
   const guests = parseInt(guestCount.value)
 
   // If bill > 0 add active class to reset button
-  if(billInput.value > 0 || guests > 0) {
+  if (billInput.value > 0 || guests > 0) {
     resetButton.classList.add('active')
   } else {
     resetButton.classList.remove('active')
   }
-
-
 
   // If percent go over all buttons and update the UI
   percentButtons.forEach((button) => {
@@ -81,13 +79,15 @@ const updateUI = (percent) => {
     }
   }
 
+  // If guest count and not an empty string
+  if (guests && guestCount.value !== '') {
+    warningLabel.style.visibility = 'hidden'
+  }
+
   // If guest count equals zero show warning label
   if (guests === 0) {
     warningLabel.style.visibility = 'visible'
-  }
-
-  // If guest count and not an empty string
-  if (guests && guestCount.value !== '') {
+  } else {
     warningLabel.style.visibility = 'hidden'
   }
 }
