@@ -46,7 +46,7 @@ const getGuestCount = () => {
   if (guestCount.value > 100) {
     guestCount.value = ''
   }
-
+  updateUI()
   calculateBill()
 }
 
@@ -87,20 +87,25 @@ const updateUI = (percent) => {
   // If guest count equals zero show warning label
   if (guests === 0) {
     warningLabel.style.visibility = 'visible'
+    guestCount.style.border = '2px solid #B48070'
   } else {
     warningLabel.style.visibility = 'hidden'
+    guestCount.style.border = ''
   }
 }
 
 // Calculate the bill
 const calculateBill = (percent) => {
+  const defaultGuest = 1
+  let currentGuests = guestCount.value
   // Get values from all inputs and percent button
   if (guestCount.value > 0) {
     updateUI(percent)
+
     // Take whatever percent is passed in and convert to a decimal by deviding by 100
     percent = percent / 100
-    let tip = (billInput.value * percent) / guestCount.value
-    let total = (billInput.value * (1 + percent)) / guestCount.value
+    let tip = (billInput.value * percent) / currentGuests
+    let total = (billInput.value * (1 + percent)) / currentGuests
 
     displayBill(tip, total)
   }

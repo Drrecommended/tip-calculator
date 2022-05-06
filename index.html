@@ -38,11 +38,21 @@
         <!--select amount to tip section-->
         <p class="input-title">Select Tip %</p>
         <div class="percent-container">
-          <button class="percent-btn" id="percent-buttons" data-value="5">5%</button>
-          <button class="percent-btn" id="percent-buttons" data-value="10">10%</button>
-          <button class="percent-btn" id="percent-buttons" data-value="15">15%</button>
-          <button class="percent-btn" id="percent-buttons" data-value="25">25%</button>
-          <button class="percent-btn" id="percent-buttons" data-value="50">50%</button>
+          <button class="percent-btn" id="percent-buttons" data-value="5">
+            5%
+          </button>
+          <button class="percent-btn" id="percent-buttons" data-value="10">
+            10%
+          </button>
+          <button class="percent-btn" id="percent-buttons" data-value="15">
+            15%
+          </button>
+          <button class="percent-btn" id="percent-buttons" data-value="25">
+            25%
+          </button>
+          <button class="percent-btn" id="percent-buttons" data-value="50">
+            50%
+          </button>
           <input
             type="number"
             data-percent
@@ -57,14 +67,17 @@
           />
         </div>
         <!--number of people section-->
-        <p class="input-title">Number of People</p>
-        <p class="warning input-title">Can't be zero</p>
+        <div class="warning-container">
+          <p class="input-title">Number of People</p>
+          <p class="warning input-title">Can't be zero</p>
+        </div>
+
         <div class="icon-container">
           <img src="./images/icon-person.svg" alt="" />
           <input
             type="number"
             placeholder="0"
-            class="input margin"
+            class="input person-input"
             id="guest-count-input"
             dir="rtl"
             min="0"

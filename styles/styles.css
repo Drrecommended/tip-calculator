@@ -174,8 +174,14 @@ input:focus {
   z-index: 999;
 }
 
-.warning {
+.warning-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.warning-container .warning {
   visibility: hidden;
+  color: #b48070;
 }
 
 .attribution {
@@ -204,8 +210,13 @@ input:focus {
   padding-top: 10px;
 }
 
-.margin {
+.person-input {
   margin-bottom: 1.5em;
+}
+
+button:hover,
+input:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 600px) {

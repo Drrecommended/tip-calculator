@@ -106,10 +106,9 @@ p {
   opacity: 100%;
 }
 
-
 .percent-btn,
 .custom-input {
-  width: clamp( 100px, 60%, 145px);
+  width: clamp(100px, 60%, 145px);
 }
 
 .result__container {
@@ -191,8 +190,13 @@ input {
   }
 }
 
-.warning {
-  visibility: hidden;
+.warning-container {
+  display: flex;
+  justify-content: space-between;
+  .warning {
+    visibility: hidden;
+    color: #b48070;
+  }
 }
 
 .attribution {
@@ -221,8 +225,15 @@ input {
   padding-top: 10px;
 }
 
-.margin {
+.person-input {
   margin-bottom: 1.5em;
+}
+
+button,
+input {
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 600px) {
