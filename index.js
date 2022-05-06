@@ -16,7 +16,6 @@ const getAndPadBill = () => {
     amount = parseFloat(billInput.value)
     billInput.value = amount.toFixed(2)
   }
-  updateUI()
   calculateBill()
 }
 
