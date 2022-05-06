@@ -85,7 +85,7 @@ const updateUI = (percent) => {
   }
 
   // If guest count equals zero show warning label
-  if (guests === 0 || guestCount.value === "") {
+  if (guests === 0 || guestCount.value === '' && billInput.value > 0) {
     warningLabel.style.visibility = 'visible'
     guestCount.style.border = '2px solid #B48070'
   } else {

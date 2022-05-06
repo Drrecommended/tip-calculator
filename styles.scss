@@ -23,6 +23,7 @@ body {
   font-family: 'Space Mono', monospace;
   box-sizing: border-box;
   height: 100vh;
+  position: relative;
 }
 
 main {
@@ -116,9 +117,6 @@ p {
 .result__container {
   background-color: $very__dark-cyan;
   padding: 2.5em 1.4em 1.4em;
-  // display: flex;
-  // justify-content: space-between;
-  // flex-direction: column;
   position: relative;
   border-radius: $border-radius2;
   .inner-result__container {
@@ -189,6 +187,7 @@ input {
 
 .input-container {
   position: relative;
+  margin: 0 auto;
   padding-left: 0.5em;
   padding-right: 0.5em;
   img {
@@ -210,8 +209,8 @@ input {
 
 .attribution {
   position: absolute;
-  bottom: 0;
   text-align: center;
+  margin-top: 50px;
   width: 100%;
 }
 
@@ -220,6 +219,11 @@ input {
   flex-wrap: wrap;
   gap: 1rem;
   padding-top: 10px;
+  
+}
+
+.percent-container, input {
+  max-width: 600px;
 }
 
 .person-input {
@@ -233,9 +237,10 @@ input {
   }
 }
 
-@media screen and (min-width: 610px) {
+@media screen and (min-width: 800px) {
   main {
     display: flex;
+    padding: 2em;
   }
 
   .result__container {
@@ -283,4 +288,13 @@ input {
     margin-top: 7em;
     margin-bottom: 4em;
   }
+}
+
+
+@media screen and(max-width: 366px){
+  .percent-btn,
+  .custom-input {
+    width: 100%;
+  }
+  
 }
