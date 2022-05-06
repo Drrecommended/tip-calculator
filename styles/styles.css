@@ -268,7 +268,7 @@ input:hover {
 @media screen and (max-width: 366px) {
   .percent-btn,
   .custom-input {
-    width: 100%;
+    max-width: 45%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
