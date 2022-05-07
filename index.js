@@ -1,7 +1,7 @@
 // Get the element you want to listen for input on
 const inputs = document.querySelectorAll('.input')
 const billInput = document.getElementById('bill-input')
-const percentButtons = document.querySelectorAll('#percent-buttons')
+const percentButtons = document.querySelectorAll('.percent-btn')
 const customPercent = document.getElementById('custom-percent-input')
 const guestCount = document.getElementById('guest-count-input')
 const personTip = document.getElementById('tip-per-person')
